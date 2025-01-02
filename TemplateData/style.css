@@ -46,6 +46,7 @@ body {
   width: 154px;
   height: 130px;
   background: url('unity-logo-dark.png') no-repeat center;
+  background-size: contain;
 }
 
 #unity-progress-bar-empty {
@@ -53,12 +54,14 @@ body {
   height: 18px;
   margin: 10px auto 0;
   background: url('progress-bar-empty-dark.png') no-repeat center;
+  background-size: contain;
 }
 
 #unity-progress-bar-full {
   width: 0%;
   height: 18px;
   background: url('progress-bar-full-dark.png') no-repeat center;
+  background-size: contain;
   transition: width 0.3s ease-in-out;
 }
 
@@ -76,6 +79,7 @@ body {
   width: 204px;
   height: 38px;
   background: url('webgl-logo.png') no-repeat center;
+  background-size: contain;
 }
 
 #unity-build-title {
@@ -94,6 +98,7 @@ body {
   height: 38px;
   cursor: pointer;
   background: url('fullscreen-button.png') no-repeat center;
+  background-size: contain;
   filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.3));
 }
 
