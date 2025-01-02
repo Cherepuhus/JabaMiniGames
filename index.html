@@ -5,6 +5,7 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <title>Черепухус | УБЕГИ ОТ ЖАБУШКИ!</title>
     <link rel="shortcut icon" href="TemplateData/favicon.ico">
+    <link rel="stylesheet" href="TemplateData/style.css">
     <style>
       /* Сброс стилей и базовые настройки */
       body {
@@ -58,31 +59,44 @@
         left: 50%;
         top: 50%;
         transform: translate(-50%, -50%);
-        display: none;
+        display: block;
+        text-align: center;
       }
 
       #unity-logo {
         width: 154px;
         height: 130px;
         background: url('unity-logo-dark.png') no-repeat center;
+        animation: fadeIn 1.5s ease-in-out infinite alternate;
       }
 
       #unity-progress-bar-empty {
-        width: 141px;
-        height: 18px;
+        width: 200px;
+        height: 20px;
         margin-top: 10px;
-        margin-left: 6.5px;
         background: #ddd;
         border-radius: 10px;
+        overflow: hidden;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
       }
 
       #unity-progress-bar-full {
         width: 0%;
-        height: 18px;
-        margin-top: 10px;
-        background: #4caf50;
+        height: 20px;
+        background: linear-gradient(to right, #4caf50, #8bc34a);
         border-radius: 10px;
-        transition: width 0.3s ease-in-out;
+        animation: loadProgress 2s ease-out infinite;
+      }
+
+      @keyframes fadeIn {
+        from { opacity: 0.5; }
+        to { opacity: 1; }
+      }
+
+      @keyframes loadProgress {
+        0% { width: 0%; }
+        50% { width: 75%; }
+        100% { width: 100%; }
       }
 
       /* Футер */
@@ -148,6 +162,7 @@
         font-size: 24px;
         font-weight: bold;
         text-transform: uppercase;
+        text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
       }
     </style>
   </head>
